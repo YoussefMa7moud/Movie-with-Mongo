@@ -21,7 +21,7 @@ app.use(express.static('public'));
 
 
 
-app.get('./', async (req, res) => {
+app.get('/', async (req, res) => {
     const movies = await movie1.find();
     res.render('index', { data: movies });
 });
